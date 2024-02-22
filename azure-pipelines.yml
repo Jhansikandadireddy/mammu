@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(221b9028-6e17-49aa-8db0-cefa1752d888)'
+    appType: 'webAppLinux'
+    appName: 'janc'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'DOTNETCORE|6.0'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
